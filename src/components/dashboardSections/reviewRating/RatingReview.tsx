@@ -22,7 +22,7 @@ interface CollegeData {
   overallRating: number;
 }
 
-export function RatingReview() {
+export function RatingReview({}:any) {
   const [showForm, setShowForm] = useState(false);
 
   const handleSubmitReview = (data: CollegeData) => {

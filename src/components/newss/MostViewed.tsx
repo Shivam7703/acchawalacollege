@@ -12,11 +12,11 @@ interface NewsItem {
   image: string;
 }
 
-interface MostViewedProps {
-  news: NewsItem[];
-}
+// interface MostViewedProps {
+//   news: NewsItem[];
+// }
 
-const MostViewed: React.FC<MostViewedProps> = ({ news }) => {
+function MostViewed ({news  }:any) {
   return (
     <div className="mx-auto mt-5 max-w-[1300px] p-3">
       <div className="mb-4 flex items-center justify-between">
@@ -49,7 +49,7 @@ const MostViewed: React.FC<MostViewedProps> = ({ news }) => {
           </div>
         </div>
         <div className="space-y-4">
-          {news.slice(1, 4).map((item) => (
+          {news.slice(1, 4).map((item :any) => (
             <div key={item.id} className="flex items-center space-x-4">
               <div className="relative h-16 w-16 flex-shrink-0">
                 <Image

@@ -172,15 +172,15 @@ export default function ScholarshipListSection({
           </div>
           {/* College List Section  */}
           <div className="flex flex-wrap justify-between">
-          {filteredData.slice(0, 3).map((college: any) => (
-          <ScholarshipCard data={college} />
+          {filteredData.slice(0, 3).map((college: any ,index:any) => (
+          <ScholarshipCard key={index} data={college} />
           ))}</div>
           {/* Top Colleges Section  */}
           <TopCollegesScroll data={topColleges} />
           {/* Next College List Section  */}
           <div className="flex flex-wrap justify-between">
-          {filteredData.slice(3).map((college: any) => (
-            <ScholarshipCard data={college} />
+          {filteredData.slice(3).map((college: any, index:any) => (
+            <ScholarshipCard key={index} data={college} />
            ))} </div>
         </main>
       </Wrapper>

@@ -27,8 +27,8 @@ function CompareCollege() {
             <h2 className='md:text-4xl text- 2xl font-bold '><span className='text-indigo-800'>{data?.title?.t1}</span> <span className='text-blue-900'>{data?.title?.t2}</span> <span className='text-blue-400'>{data?.title?.t3}</span></h2>
 
             <div className='flex items-center  my-12'>
-              {data?.college?.map((col:any) => (
-                <div className='flex items-center'>
+              {data?.college?.map((col:any, index:any) => (
+                <div key={index} className='flex items-center'>
 <Image src={col.img} alt='college image' className='w-12 h-12 rounded-full object-cover m-4'/>
 <div className='mx-3 text-center'><h3 className='text-2xl font-bold'>{col.name}</h3>
 <p>{col.text}</p></div>

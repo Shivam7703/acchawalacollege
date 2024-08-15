@@ -26,7 +26,7 @@ img: graduated,
 
       <div className='md:p-16 p-5 bg-blue-600 text-white flex flex-wrap gap-3 justify-between '>
 {data?.counting?.map((rate :any, index:any) => (
-<div>
+<div key={index}>
     <h3 className='font-bold md:text-5xl text-3xl'>{rate.number}</h3>
     <p>{rate.text}</p>
 </div>
